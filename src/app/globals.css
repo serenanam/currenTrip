@@ -136,3 +136,7 @@ a:hover {
   color: grey;
   text-decoration-color: rgb(181, 181, 181);
 }
+
+.homepage-text-container {
+  padding: 10rem 20rem;
+}

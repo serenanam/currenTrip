@@ -21,7 +21,7 @@ export default function NavBar() {
 
     return (
         <nav id="desktop-nav">
-            <div className="logo">CurrenTrip</div>
+            <div className="logo"><Link href="/">CurrenTrip</Link></div>
             <div>
                 <ul className="nav-links">
                     {isLoggedIn ? (
