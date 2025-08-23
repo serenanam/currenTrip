@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import CurrencyDropdown from "@/components/currency_select";
 import SpendingPieChart from "@/components/spending_piechart";
 import { formatCurrency } from "@/lib/format_currency";
@@ -41,7 +41,7 @@ export default function TripPage() {
         fetchTrip();
       }, [fetchTrip]);
 
-    const convertCurrency = async (amount, fromCurrency, toCurrency) => {
+    const convertCurrency = useCallback(async (amount, fromCurrency, toCurrency) => {
         const res = await fetch("/api/convert_currency", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -56,7 +56,7 @@ export default function TripPage() {
 
         const data = await res.json();
         return data.converted;
-    };
+    }, []);
 
     //calculate total spending
     useEffect(() => {
@@ -79,7 +79,7 @@ export default function TripPage() {
         } else {
             setTotal(0);
         }
-    }, [trip]);
+    }, [trip, convertCurrency]);
 
     // add spending in a trip page
     const handleAddSpending = async (e) => {

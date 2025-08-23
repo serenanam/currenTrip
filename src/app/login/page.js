@@ -25,7 +25,8 @@ export default function LoginPage() {
     if (res.ok) {
       setMessage("Login successful!");
       localStorage.setItem("email", form.email);
-      window.location.href = "/trips";    } else {
+      window.location.href = "/trips";
+    } else {
       setMessage(data.error || "Login failed.");
     }
   };

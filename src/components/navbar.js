@@ -13,7 +13,7 @@ export default function NavBar() {
     }, []);
 
     async function handleLogout() {
-        await fetch("api/logout", { method: "POST" }).catch(() => { });
+        await fetch("/api/logout", { method: "POST" }).catch(() => { });
         localStorage.removeItem("email");
         setIsLoggedIn(false);
         router.push("/");

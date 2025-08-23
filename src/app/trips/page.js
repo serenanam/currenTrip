@@ -60,7 +60,7 @@ export default function TripsPage() {
                     <div>
                     <Link href={`/trips/${trip._id}`}><h2>{trip.title}</h2></Link>
                     <p>
-                    Total Spending: {formatCurrency(trip.totalSpending.toFixed(2), trip.currency)}
+                    Total Spending: {formatCurrency((trip.totalSpending || 0).toFixed(2), trip.currency)}
                     </p>
                     </div>
                     
