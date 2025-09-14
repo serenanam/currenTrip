@@ -1,3 +1,8 @@
+
+# CurrenTrip
+Welcome to CurrenTrip — your all-in-one travel budget tracker that helps you effortlessly track and manage your travel expenses across multiple currencies. Budget smarter, spend better, and keep track of every expense across currencies while you explore the world. Stay on top of your budget with easy-to-use tools, clear visuals, and real-time currency conversions — so you can focus on your current trip, not the math.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
